@@ -25,9 +25,18 @@ module control_path(
     input enable,
     output reg ready
     );
-    parameter a = 2'b00, b = 2'b01, c = 2'b10 , d = 2'b11;
-    wire sipo_empty, current_reg_overflow, bram_write_ack, piso_overflow;
-    always@ (posedge clk) 
+    parameter a = 3'b000, b = 3'b001, c = 3'b010 , d = 3'b011, e = 3'b100;
+    wire sipo_overflow, current_reg_overflow, bram_write_ack, piso_overflow, sipo_empty;
+    reg [2:0] state;
+    always @(posedge clk) 
+        case (state)
+        a: if(enable) state <= b;
+        b: if(current_reg_overflow) state <= c;
+        c: if(piso_overflow) state <= d;
+        d: if(sipo_overflow) state <= e;
+        e: if(sipo_empty) state <= a;
+        default: state <= a;
+        endcase
     begin
         
     end
