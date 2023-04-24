@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: Bharath Srinivasan
+// Engineer: Gouri Krishna 
 // 
 // Create Date: 04/07/2023 02:00:58 PM
 // Design Name: Blockram - width 35 bit, Depth: 65536
