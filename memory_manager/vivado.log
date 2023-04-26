@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Apr 13 11:35:39 2023
-# Process ID: 18359
+# Start of session at: Sun Apr 23 11:52:06 2023
+# Process ID: 13760
 # Current directory: /home/bharath/Documents/required/projects/AstarHardware/memory_manager
 # Command line: vivado ./memory_manager.xpr
 # Log file: /home/bharath/Documents/required/projects/AstarHardware/memory_manager/vivado.log
 # Journal file: /home/bharath/Documents/required/projects/AstarHardware/memory_manager/vivado.jou
-# Running On: bharath-Aspire-A715-41G, OS: Linux, CPU Frequency: 1400.000 MHz, CPU Physical cores: 8, Host memory: 6152 MB
+# Running On: bharath-Aspire-A715-41G, OS: Linux, CPU Frequency: 1700.000 MHz, CPU Physical cores: 8, Host memory: 6152 MB
 #-----------------------------------------------------------
 start_gui
 open_project ./memory_manager.xpr
@@ -63,7 +63,830 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 6444.762 ; gain = 217.770 ; free physical = 130 ; free virtual = 5328
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:13 . Memory (MB): peak = 6458.355 ; gain = 206.434 ; free physical = 130 ; free virtual = 4958
 update_compile_order -fileset sources_1
+file mkdir /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v w ]
+add_files -fileset sim_1 /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v
+update_compile_order -fileset sim_1
+set_property is_global_include true [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+set_property is_global_include false [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+set_property is_global_include true [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+set_property is_global_include false [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+set_property is_enabled false [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+set_property is_enabled true [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+set_property is_enabled false [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+set_property is_enabled true [get_files  /home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v]
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'blockram'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'blockram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj blockram_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blockram_behav xil_defaultlib.blockram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blockram_behav xil_defaultlib.blockram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.blockram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot blockram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "blockram_behav -key {Behavioral:sim_1:Functional:blockram} -tclbatch {blockram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source blockram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/blockram/ram" to the wave window because it has 2293760 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'blockram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 6804.332 ; gain = 94.637 ; free physical = 602 ; free virtual = 5180
+set_property top control_path_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2991] 'piso_empty' is not declared under prefix 'dut' [/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v:36]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-1280] procedural assignment to a non-register current_reg_overflow is not permitted, left-hand side should be reg/integer/time/genvar [/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v:34]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register piso_overflow is not permitted, left-hand side should be reg/integer/time/genvar [/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v:35]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register sipo_overflow is not permitted, left-hand side should be reg/integer/time/genvar [/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v:36]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register sipo_empty is not permitted, left-hand side should be reg/integer/time/genvar [/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v:37]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register sipo_empty is not permitted, left-hand side should be reg/integer/time/genvar [/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v:38]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "control_path_tb_behav -key {Behavioral:sim_1:Functional:control_path_tb} -tclbatch {control_path_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source control_path_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 88 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'control_path_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6886.184 ; gain = 47.828 ; free physical = 577 ; free virtual = 5162
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/control_path_tb/dut/state}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 88 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 6888.184 ; gain = 0.000 ; free physical = 489 ; free virtual = 5074
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 88 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 6890.844 ; gain = 2.660 ; free physical = 286 ; free virtual = 5133
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$stop called at time : 23 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 36
+relaunch_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 6898.848 ; gain = 7.996 ; free physical = 174 ; free virtual = 5023
+add_bp {/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v} 36
+remove_bps -file {/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v} -line 36
+step
+Stopped at time : 23 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 37
+step
+Stopped at time : 25 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 29
+step
+Stopped at time : 25 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 29
+step
+Stopped at time : 25 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" Line 34
+step
+Stopped at time : 25 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" Line 36
+step
+Stopped at time : 25 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" Line 36
+step
+Stopped at time : 25 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" Line 33
+step
+Stopped at time : 28 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 37
+step
+Stopped at time : 28 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 38
+step
+Stopped at time : 30 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 29
+step
+Stopped at time : 30 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 29
+step
+Stopped at time : 33 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 38
+step
+Stopped at time : 33 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+step
+Stopped at time : 35 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 29
+step
+Stopped at time : 35 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 29
+step
+Stopped at time : 35 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" Line 34
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$stop called at time : 28 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 38
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 6906.859 ; gain = 0.000 ; free physical = 232 ; free virtual = 5043
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 88 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 41
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6922.859 ; gain = 2.992 ; free physical = 216 ; free virtual = 5023
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 83 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 41
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6922.867 ; gain = 0.000 ; free physical = 209 ; free virtual = 5016
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 88 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 41
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 6938.867 ; gain = 8.000 ; free physical = 202 ; free virtual = 5014
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 133 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 41
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 6946.871 ; gain = 7.996 ; free physical = 184 ; free virtual = 4992
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 133 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6970.883 ; gain = 2.992 ; free physical = 219 ; free virtual = 5023
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 133 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6978.887 ; gain = 7.996 ; free physical = 131 ; free virtual = 4970
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neighbour_coordinates
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_path
+Compiling module xil_defaultlib.control_path_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "control_path_tb_behav -key {Behavioral:sim_1:Functional:control_path_tb} -tclbatch {control_path_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source control_path_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 133 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'control_path_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 7023.914 ; gain = 19.008 ; free physical = 643 ; free virtual = 4701
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/control_path_tb/dut/state}} 
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/control_path_tb/dut/current_reg_en}} {{/control_path_tb/dut/piso_wr_en}} {{/control_path_tb/dut/piso_rd_en}} {{/control_path_tb/dut/sipo_en}} {{/control_path_tb/dut/bram_en}} {{/control_path_tb/dut/sipo_overflow}} {{/control_path_tb/dut/current_reg_overflow}} {{/control_path_tb/dut/bram_write_ack}} {{/control_path_tb/dut/piso_overflow}} {{/control_path_tb/dut/sipo_empty}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj control_path_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_path_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+$finish called at time : 133 ns : File "/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v" Line 39
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 7039.926 ; gain = 0.000 ; free physical = 460 ; free virtual = 4536
+save_wave_config {/home/bharath/Documents/required/projects/AstarHardware/memory_manager/control_path_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/bharath/Documents/required/projects/AstarHardware/memory_manager/control_path_tb_behav.wcfg
+set_property xsim.view /home/bharath/Documents/required/projects/AstarHardware/memory_manager/control_path_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 13 11:39:46 2023...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 23 21:43:53 2023...

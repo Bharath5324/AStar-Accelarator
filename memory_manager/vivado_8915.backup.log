@@ -2,16 +2,16 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Apr 26 16:21:04 2023
-# Process ID: 5354
-# Current directory: /home/bharath/Documents/required/projects/AstarHardware
-# Command line: vivado ./memory_manager/memory_manager.xpr
-# Log file: /home/bharath/Documents/required/projects/AstarHardware/vivado.log
-# Journal file: /home/bharath/Documents/required/projects/AstarHardware/vivado.jou
+# Start of session at: Sun Apr 23 10:45:59 2023
+# Process ID: 8915
+# Current directory: /home/bharath/Documents/required/projects/AstarHardware/memory_manager
+# Command line: vivado ./memory_manager.xpr
+# Log file: /home/bharath/Documents/required/projects/AstarHardware/memory_manager/vivado.log
+# Journal file: /home/bharath/Documents/required/projects/AstarHardware/memory_manager/vivado.jou
 # Running On: bharath-Aspire-A715-41G, OS: Linux, CPU Frequency: 1400.000 MHz, CPU Physical cores: 8, Host memory: 6152 MB
 #-----------------------------------------------------------
 start_gui
-open_project ./memory_manager/memory_manager.xpr
+open_project ./memory_manager.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
@@ -63,6 +63,9 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:39 ; elapsed = 00:00:15 . Memory (MB): peak = 6482.141 ; gain = 241.746 ; free physical = 320 ; free virtual = 5413
+open_project: Time (s): cpu = 00:00:40 ; elapsed = 00:00:20 . Memory (MB): peak = 6450.875 ; gain = 230.703 ; free physical = 116 ; free virtual = 4544
+update_compile_order -fileset sources_1
+set_property top control_path [current_fileset]
+update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 26 20:23:55 2023...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 23 11:29:56 2023...
