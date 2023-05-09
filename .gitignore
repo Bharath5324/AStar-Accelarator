@@ -1,2 +1,4 @@
 ./vivado.log
 ./vivado.jou
+./memory_manager/vivado*
+./memory_manager/memory_manager.cache/*
