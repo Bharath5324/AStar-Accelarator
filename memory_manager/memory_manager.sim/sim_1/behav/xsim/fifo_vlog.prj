@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../memory_manager.srcs/sources_1/new/fifo.v" \
+"../../../../memory_manager.srcs/sources_1/new/blockram.v" \
+"../../../../memory_manager.srcs/sources_1/new/neigbours_generator.v" \
+"../../../../memory_manager.srcs/sources_1/new/control_path.v" \
+"../../../../memory_manager.srcs/sources_1/new/SIPO_51_408.v" \
+"../../../../memory_manager.srcs/sources_1/new/piso_128_16.v" \
+"../../../../memory_manager.srcs/sim_1/new/control_path_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -22,7 +22,6 @@
 
 module neighbour_coordinates(
     input [15:0] input_coordinate,
-    input enable,
     output reg [127:0] neighbours
 );
 
@@ -32,11 +31,6 @@ reg [15:0] neighbour_coordinates [7:0];
 integer i;
 
 always @(*) begin
-    if (!enable) begin
-        for (i = 0; i < 8; i = i + 1) begin
-            neighbour_coordinates[i] <= 16'hxxxx; // Undefined value
-        end
-    end else begin
         x_coordinate <= input_coordinate[15:8];
         y_coordinate <= input_coordinate[7:0];
 
@@ -95,7 +89,6 @@ always @(*) begin
         end else begin
             neighbour_coordinates[7] <= {x_coordinate+1'b1, y_coordinate+1'b1};
         end
-    end
     neighbours <= {neighbour_coordinates[0],neighbour_coordinates[1],neighbour_coordinates[2],neighbour_coordinates[3],neighbour_coordinates[4],neighbour_coordinates[5],neighbour_coordinates[6],neighbour_coordinates[7]};
 end
 
