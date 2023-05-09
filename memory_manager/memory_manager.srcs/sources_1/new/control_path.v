@@ -48,7 +48,7 @@ module control_path(
    
     wire [127:0] neighbour_address;
     
-    neigbour_coordinates address_gen(.input_coordinate(current_data[15:0]), .neighbours(neighbour_address));
+    neighbour_coordinates address_gen(.input_coordinate(current_data[15:0]), .neighbours(neighbour_address));
     
     // BRAM nets and instantiation
     
