@@ -23,7 +23,7 @@
 module control_path(
     input clk,
     input enable,
-    input [34:0] din,
+    input [50:0] din,
     output reg [127:0] dout,
     output reg ready   
     );
@@ -56,7 +56,7 @@ module control_path(
     
     reg [34:0] bram_data;
     
-    blockram ram(.clka(clk), .clkb(clk), .ena(bram_en), .enb(), .wea(bram_we), .web(), .addra(address_bus), .addrb(), .dia(current_data[50:14]), .dib(), .doa(bram_data), .dob());
+    blockram ram(.clka(clk), .clkb(clk), .ena(bram_en), .enb(), .wea(bram_we), .web(), .addra(address_bus), .addrb(), .dia(current_data[50:16]), .dib(), .doa(bram_data), .dob());
         
     // PISO nets and instantiation
     
@@ -93,10 +93,10 @@ module control_path(
         a:;
         b: current_reg_en <= 1'b1;
         c: begin 
-            piso_wr_en<= 1'b1; current_reg_en <= 1'b0; 
+            piso_wr_en<= 1'b1; current_reg_en <= 1'b0; address_bus <= current_data[15:0];
            end
         d: begin 
-            piso_wr_en<= 1'b0; piso_rd_en<= 1'b1; sipo_en <= 1'b1; bram_en <= 1'b1;
+            piso_wr_en<= 1'b0; piso_rd_en<= 1'b1; sipo_en <= 1'b1; bram_en <= 1'b1; address_bus <= piso_out;
            end
         e: begin
             ready <= 1'b1;
