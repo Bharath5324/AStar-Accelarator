@@ -24,7 +24,7 @@ module control_path(
     input clk,
     input enable,
     input [50:0] din,
-    output reg [127:0] dout,
+    output reg [407:0] dout,
     output reg ready   
     );
     
@@ -35,11 +35,12 @@ module control_path(
     // Control signal nets
     
     reg current_reg_en, piso_wr_en, piso_rd_en, sipo_en, bram_en, bram_we;
-    reg sipo_overflow, current_reg_overflow, bram_write_ack, piso_overflow, sipo_empty;
+    reg bram_write_ack;
     
     // Current register nets and instantiation
     
-    wire [50:0] current_data; 
+    wire [50:0] current_data;
+    wire current_reg_overflow;
     
     current_reg current(.din(din), .clk(clk), .enable(current_reg_en), .dout(current_data), .overflow(current_reg_overflow));
     
@@ -54,25 +55,28 @@ module control_path(
     
     reg [15:0] address_bus;
     
-    reg [34:0] bram_data;
+    wire [34:0] bram_data;
     
     blockram ram(.clka(clk), .clkb(clk), .ena(bram_en), .enb(), .wea(bram_we), .web(), .addra(address_bus), .addrb(), .dia(current_data[50:16]), .dib(), .doa(bram_data), .dob());
         
     // PISO nets and instantiation
     
-    reg [15:0] piso_out;
+    wire [15:0] piso_out;
+    wire piso_overflow;
     piso_128bit piso(.clk(clk), .reset(), .data_in(neighbour_address), .write_en(piso_wr_en), .read_en(piso_rd_en), .out(piso_out), .piso_overflow(piso_overflow));
     
     
     // FIFO nets and instantiation
     
-    reg [15:0] fifo_out;
+    wire [15:0] fifo_out;
     
     fifo f1(.clk(clk), .din(piso_out), .dout(fifo_out));
     
     // SIPO nets and instantiation
-    
-    sipo s1(.clk(clk), .data_in({bram_data, fifo_out}), .rst(), .enable(sipo_en), .data_out(dout), .sipo_overflow(sipo_overflow), .sipo_empty(sipo_empty));
+    wire sipo_overflow;
+    wire [127:0] dout_wire;
+    wire sipo_empty;
+    sipo s1(.clk(clk), .data_in({bram_data, fifo_out}), .rst(), .enable(sipo_en), .data_out(dout_wire), .sipo_overflow(sipo_overflow), .sipo_empty(sipo_empty));
     
     
     always @(posedge clk) 
@@ -91,7 +95,9 @@ module control_path(
     begin 
         case(state)
         a:;
-        b: current_reg_en <= 1'b1;
+        b: begin
+            current_reg_en <= 1'b1;
+            end
         c: begin 
             piso_wr_en<= 1'b1; current_reg_en <= 1'b0; address_bus <= current_data[15:0];
            end
@@ -100,6 +106,7 @@ module control_path(
            end
         e: begin
             ready <= 1'b1;
+            dout <= dout_wire;
            end
         endcase
     end

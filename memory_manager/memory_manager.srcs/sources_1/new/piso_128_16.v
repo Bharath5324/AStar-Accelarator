@@ -39,6 +39,7 @@ module piso_128bit(
     begin
       counter <= 4'd0;
       out <= 16'd0;
+      register_data <= 128'b0;
     end 
     else 
     begin
@@ -91,14 +92,14 @@ module piso_128bit(
   end
   // overflow and empty
   always @(register_data) begin
-    interm[0] = |register_data[0:15];
-    interm[1] = |register_data[16:31];
-    interm[2] = |register_data[32:47];
-    interm[3] = |register_data[48:63];
-    interm[4] = |register_data[64:79];
-    interm[5] = |register_data[80:95];
-    interm[6] = |register_data[96:111]; 
-    interm[7] = |register_data[112:127];
+    interm[0] = |register_data[15:0];
+    interm[1] = |register_data[31:16];
+    interm[2] = |register_data[47:32];
+    interm[3] = |register_data[63:48];
+    interm[4] = |register_data[79:64];
+    interm[5] = |register_data[95:80];
+    interm[6] = |register_data[111:96]; 
+    interm[7] = |register_data[127:112];
     piso_overflow = &interm;
   end
 

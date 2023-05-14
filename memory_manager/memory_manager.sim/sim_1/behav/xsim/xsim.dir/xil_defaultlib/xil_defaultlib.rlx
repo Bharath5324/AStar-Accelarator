@@ -1,12 +1,13 @@
 0.7
 2020.2
 Oct 14 2022
-05:07:14
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v,1682234197,verilog,,,,control_path_tb,,,,,,,,
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/SIPO_51_408.v,1682508074,verilog,,/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/piso_128_16.v,,sipo,,,,,,,,
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v,1681812759,verilog,,/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v,,blockram,,,,,,,,
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v,1682259215,verilog,,/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/SIPO_51_408.v,,control_path,,,,,,,,
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/fifo.v,1682529721,verilog,,/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/blockram.v,,fifo,,,,,,,,
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v,1681587514,verilog,,/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/control_path.v,,neighbour_coordinates,,,,,,,,
-/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sources_1/new/piso_128_16.v,1682508074,verilog,,/home/bharath/Documents/required/projects/AstarHardware/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v,,piso_128bit,,,,,,,,
+05:20:55
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.sim/sim_1/behav/xsim/glbl.v,1683524404,verilog,,,,glbl,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v,1684050909,verilog,,,,control_path_tb,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/SIPO_51_408.v,1683524404,verilog,,C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/piso_128_16.v,,sipo,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/blockram.v,1683524404,verilog,,C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v,,blockram,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/control_path.v,1684050105,verilog,,C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/SIPO_51_408.v,,control_path,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/current_reg.v,1683812934,verilog,,C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sim_1/new/control_path_tb.v,,current_reg,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/fifo.v,1683660111,verilog,,C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/blockram.v,,fifo,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/neigbours_generator.v,1683660111,verilog,,C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/control_path.v,,neighbour_coordinates,,,,,,,,
+C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/piso_128_16.v,1684049507,verilog,,C:/Users/acer/Desktop/AStar-Accelarator/memory_manager/memory_manager.srcs/sources_1/new/current_reg.v,,piso_128bit,,,,,,,,
