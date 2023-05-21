@@ -19,7 +19,7 @@ module control_path_tb;
         clk = 0;
         enable = 0;
         din = 0;
-        
+        $dumpvars(0, control_path_tb);
         // Apply stimulus
         #10 enable = 1;
         #10 din = 51'b10101010101010101010101010101010101010101010101010;

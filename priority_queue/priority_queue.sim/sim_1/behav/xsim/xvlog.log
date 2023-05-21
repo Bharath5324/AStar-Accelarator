@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AStar-Accelarator/priority_queue/priority_queue.srcs/sources_1/new/queue.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module queue
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bharath/Documents/required/projects/AStar-Accelarator/priority_queue/priority_queue.srcs/sim_1/new/queue_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module queue_tb
+WARNING: [VRFC 10-8497] literal value 'h01010001111011110001101100101110101001000111111100001100111101100011011100101101110 truncated to fit in 83 bits [/home/bharath/Documents/required/projects/AStar-Accelarator/priority_queue/priority_queue.srcs/sim_1/new/queue_tb.v:36]
