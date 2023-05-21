@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Least_cost_finder_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Least_cost_finder" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,099,990 ps"></ZoomStartTime>
+      <ZoomEndTime time="1,100,002 ps"></ZoomEndTime>
+      <Cursor1Time time="1,100,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="82"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/Least_cost_finder/input_data" type="array">
+      <obj_property name="ElementShortName">input_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">input_data[255:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Least_cost_finder/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Least_cost_finder/push_data" type="array">
+      <obj_property name="ElementShortName">push_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">push_data[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Least_cost_finder/least_index" type="array">
+      <obj_property name="ElementShortName">least_index[2:0]</obj_property>
+      <obj_property name="ObjectShortName">least_index[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Least_cost_finder/min_value" type="array">
+      <obj_property name="ElementShortName">min_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">min_value[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Least_cost_finder/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Least_cost_finder/control_output" type="array">
+      <obj_property name="ElementShortName">control_output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">control_output[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>
