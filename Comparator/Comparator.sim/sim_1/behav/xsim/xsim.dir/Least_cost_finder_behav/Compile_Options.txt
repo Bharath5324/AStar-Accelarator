@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "Least_cost_finder_behav" "xil_defaultlib.Least_cost_finder" "xil_defaultlib.glbl" -log "elaborate.log" 
